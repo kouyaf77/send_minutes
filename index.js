@@ -18,7 +18,7 @@ const ffmpeg = require('fluent-ffmpeg');
 exports.helloGCSGeneric = (data, context) => {
   const file = data;
 
-  if (file.contentType === 'audio/flac') {
+  if (file.contentType.indexOf('audio/mp3') === -1) {
     return false;
   }
 
